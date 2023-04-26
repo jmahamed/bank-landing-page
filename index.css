@@ -1,0 +1,515 @@
+:root {
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-gray-blue: hsl(220, 16%, 96%);
+    --v-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --gradient: linear-gradient(to right, #31D35C 0%, #2BB7DA 100%) 0 0 100% 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/* font-family: 'Public Sans', sans-serif; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 165px;
+}
+
+.navbar-items {
+    display: flex;
+    width: 372px;
+    justify-content: space-between
+}
+
+.navbar-items a {
+    text-decoration: none;
+    color: #777777;
+    font-size: 16px;
+}
+
+.navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: -100%;
+    transition: top .4s;
+    row-gap: 20px;
+    left: 5%;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    width: 90%;
+    height: 200px;
+    border: 1px solid black;
+    box-shadow: 10px 80px 48px hsla(203, 71%, 25%, .5);
+    z-index: 2;
+}
+
+.show-menu {
+    top: 50px;
+}
+
+.navbar-mobile a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.navbar-mobile a:hover {
+    color: black;
+    max-width: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to right, #31D35C 0%, #2BB7DA 100%) 0 0 100% 0;
+}
+
+.navbar-items a:hover {
+    color: black;
+    max-width: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to right, #31D35C 0%, #2BB7DA 100%) 0 0 100% 0;
+}
+
+
+.request-btn {
+    width: 174px;
+    height: 40px;
+    border-radius: 9999px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    background-image: linear-gradient(to right, var(--lime-green) 0%, var(--bright-cyan) 100%);
+}
+
+.menu-icon {
+    display: none;
+}
+
+.close-icon {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    padding: 5px;
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    width: 404px;
+    height: 496px;
+    margin: 128px 75px 235px 128px;
+}
+
+.hero-info h1 {
+    font-weight: 300;
+    font-size: 54px;
+    color: var(--dark-blue);
+}
+
+.bg-desktop {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    height: 939px;
+    top: -265px;
+    left: 566px;
+}
+
+.intro-mobile {
+    display: none;
+}
+
+.mockups-img {
+    position: relative;
+    z-index: 2;
+    top: -120px;
+    left: 200px;
+}
+
+main {
+    height: 642px;
+    padding: 96px 128px 180px;
+    margin-top: -288px;
+    background-color: #F4F5F7;
+    overflow: visible;
+}
+
+.easybank-info {
+    display: flex;
+    flex-direction: column;
+    width: 573px;
+    height: 130px;
+    row-gap: 16px;
+}
+
+.easybank-info h1 {
+    color: var(--dark-blue);
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.easybank-info p {
+    color: #777777;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.easybank-services {
+    display: flex;
+    width: 1132px;
+    margin-top: 64px;
+    column-gap: 24px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+    height: 265px;
+    row-gap: 32px;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.service img {
+    width: 72px;
+    height: 72px;
+}
+
+.service h4 {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.service p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777777;
+}
+
+.blog {
+    width: 100%;
+    height: 718px;
+    padding: 96px 177px 101px 126px;
+    background-color: #FAFAFA;
+}
+
+.blog h1 {
+  color: var(--dark-blue);
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    width: 1137px;
+    height: 429px;
+    margin-top: 32px;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 24px;
+}
+
+.article {
+    width: 256px;
+    height: 429px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.article:hover {
+    transform: scale(0.99);
+    cursor: pointer;
+    box-shadow: inset;
+}
+
+.article img {
+    width: 256px;
+    height: 200px;
+}
+
+.article span {
+    font-size: 12px;
+    font-weight: 300;
+    color: #777777;
+}
+
+.article h3 {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.article p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+}
+
+/* media queries */
+
+@media (max-width: 1280px) {
+    .navbar {
+        padding: 8px 5px;
+    }
+
+    .hero-info h1 {
+        font-size: 30px;
+    }
+
+    .bg-desktop {
+        left: 430px;
+    }
+
+    .mockups-img {
+        left: 10px;
+    }
+
+    main {
+        height: 864px;
+    }
+
+    .easybank-services {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.blog {
+    height: 800px;
+}
+
+.blog h1 {
+    font-size: 32px;
+    height: 50px;
+}
+
+.articles{
+    width: 100%;
+    height: 429px;
+    flex-wrap: wrap;
+}
+
+/* @media only screen and (max-width: 768px) {
+    .hero-info h1 {
+        font-size: 24px;
+    }
+
+    .hero-info p {
+        font-size: 14px;
+    }
+
+    .hero-info {
+        margin: 50px;
+    }
+
+    main {
+        padding: 96px 50px;
+    }
+
+    .easybank-services {
+        gap: 32px;
+    }
+} */
+/* mobile */
+@media only screen and (max-width: 800px) {
+
+.request-btn {
+    display: none;
+}
+
+    .navbar-items,
+    .navbar-items a {
+        display: none;
+    }
+
+   .navbar-items{
+    padding-right: 110px;
+   }
+    .navbar-items a:hover {
+        color: black;
+        max-width: 100%;
+        border-width: 0;
+        border-style: none;
+        border-image:none;    }
+
+    .easybank-logo,
+    .menu-icon {
+        align-self: flex-start;
+    }
+
+    .navbar {
+        text-align: center;
+        height: 40px;
+        
+    }
+
+    .menu-icon {
+        display: flex;
+        padding: 5px;
+    }
+
+    .menu-icon:hover {
+        cursor: pointer;
+    }
+
+    .close-icon:hover{
+        cursor: pointer;
+    }
+
+
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .hero-info {
+        margin: 0 auto;
+    }
+
+    .bg-desktop {
+        display: none;
+    }
+
+    .intro-mobile {
+        position: absolute;
+        display: block;
+        top: 0;
+        margin-left: 0px;
+        width: 104%;
+        z-index: 0;
+    }
+
+    .mockups-image {
+        display: block;
+        z-index: 1;
+        position: relative;
+        left: 10px;
+        top: -25px;
+        width: 95%;
+    }
+
+    .hero-info {
+        width: 350px;
+        height: 500px;
+        margin-top: -40px;
+    }
+
+    .hero-info h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .hero-info p {
+        font-size: 16px;
+        text-align: center;
+        color: #777777;
+    }
+
+    .easybank-info {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 230px;
+    row-gap: 16px;
+    }
+
+    .easybank-info h1 {
+        font-size: 29px;
+        width: 310px;
+        text-align: center;
+    }
+
+    .easybank-info p {
+        font-size: 16px;
+        width: 280px;
+        text-align: center;
+    }
+
+    .easybank-services {
+        justify-content: center;
+    }
+
+    .service {
+        align-items: center;
+        height: 400px;
+    }
+
+    .service-info h4 {
+        text-align: center;
+    }
+
+    .service-info p {
+        text-align: center;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 70px;
+        height: 2000px;
+    }
+
+    .blog {
+        height: 2000px;
+        padding: 30px 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .blog h1 {
+        font-size: 28px;
+    }
+    .articles{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 2000px;
+        flex-wrap: wrap;
+    }
+
+}
