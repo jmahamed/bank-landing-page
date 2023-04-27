@@ -100,6 +100,7 @@ body::-webkit-scrollbar {
     color: white;
     font-weight: 700;
     font-size: 16px;
+    box-shadow: 0px 0px 16px rgba(51, 211, 94, 0.5);
     background-image: linear-gradient(to right, var(--lime-green) 0%, var(--bright-cyan) 100%);
 }
 
@@ -286,6 +287,86 @@ main {
     color: #777777;
 }
 
+footer {
+    display: flex;
+    height: 181px;
+    width: 100%;
+    background-color: var(--dark-blue);
+    padding: 33px 165px 44px 165px;
+    justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+footer a:hover {
+    color: var(--lime-green);
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 155px;
+    height: 104px;
+}
+
+#easybank-logo {
+    width: 139px;
+    height: 20px;
+}
+
+.socials{
+    display: flex;
+    column-gap: 13px;
+    width: 155px;
+    height: 20px;
+}
+
+.footer-items1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 104px;
+    width: 69px;
+}
+
+.footer-items2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 104px;
+    width: 104px;
+}
+
+.footer-items3{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 104px;
+    width: 398px;
+}
+
+.request-button {
+    width: 174px;
+    height: 40px;
+    border-radius: 9999px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0px 0px 16px rgba(51, 211, 94, 0.5);
+    background-image: linear-gradient(to right, var(--lime-green) 0%, var(--bright-cyan) 100%);
+}
+
+.footer-items3 p{
+    color: #BBBBBB;
+}
 /* media queries */
 
 @media (max-width: 1280px) {
@@ -522,6 +603,30 @@ main {
         height: 2000px;
         flex-wrap: wrap;
         overflow: hidden;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 530px;
+        padding: 33px 165px;
+    }
+
+    .logos {
+        justify-content: space-around;
+    }
+
+    .footer-items1 {
+        align-items: center;
+    }
+
+    .footer-items2 {
+        align-items: center;
+    }
+
+    .footer-items3 {
+        align-items: center;
     }
 
 }
